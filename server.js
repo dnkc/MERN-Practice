@@ -12,15 +12,23 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-  res.append("Access-Control-Allow-Origin", ["*"]);
-  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.append("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
-
 // DB Config
 const MONGO_DB = require("./config/keys").mongoURI;
+
+const __dirname = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  // need to make build folder path static
+  app.use(express.static(path.join(__dirname, "/client/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running!");
+  });
+}
 
 // connect to mongoDB
 mongoose
