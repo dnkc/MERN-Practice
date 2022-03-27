@@ -91,7 +91,7 @@ router.post("/login", (req, res) => {
         // User Matched
         const payload = { id: user.id, name: user.name, avatar: user.avatar }; // create JWT payload
         // Sign Token
-        jwt.sign(payload, keys.secretKey, { expiresIn: 3600 }, (err, token) => {
+        jwt.sign(payload, "secretKey", { expiresIn: 3600 }, (err, token) => {
           res.json({
             success: true,
             token: "Bearer " + token,
