@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import { deletePost, addLike, removeLike } from "../../actions/postActions";
 
 class PostItem extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
   onDeleteClick(id) {
     this.props.deletePost(id);

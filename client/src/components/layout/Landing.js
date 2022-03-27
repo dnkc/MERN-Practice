@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 class Landing extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {

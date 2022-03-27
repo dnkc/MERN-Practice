@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import CommentItem from "./CommentItem";
 
 class CommentFeed extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
   render() {
     const { comments, postId } = this.props;

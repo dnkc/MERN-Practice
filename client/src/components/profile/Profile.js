@@ -10,8 +10,8 @@ import Spinner from "../common/Spinner";
 import { getProfileByHandle } from "../../actions/profileActions";
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
   componentDidMount() {
     if (this.props.match.params.handle) {
