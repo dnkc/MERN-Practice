@@ -9,6 +9,13 @@ import {
   GET_PROFILES,
 } from "./types";
 
+// profile loading
+export const setProfileLoading = () => {
+  return {
+    type: PROFILE_LOADING,
+  };
+};
+
 // get current profile
 export const getCurrentProfile = () => (dispatch) => {
   dispatch(setProfileLoading());
@@ -53,12 +60,6 @@ export const createProfile = (profileData, history) => (dispatch) => {
     .catch((err) => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
 
-// profile loading
-export const setProfileLoading = () => {
-  return {
-    type: PROFILE_LOADING,
-  };
-};
 // clear profile
 export const clearCurrentProfile = () => {
   return {
