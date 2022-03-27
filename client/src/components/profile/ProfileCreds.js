@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Moment from "react-moment";
 class ProfileCreds extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const { experience, education } = this.props;
     const expItems = experience.map((exp) => (

@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import isEmpty from "../../validation/is-empty-client";
 
 class Profile extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const { profile } = this.props;
     return (

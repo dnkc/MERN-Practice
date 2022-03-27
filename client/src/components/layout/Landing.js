@@ -4,9 +4,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 class Landing extends Component {
-  constructor() {
-    super();
-  }
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");

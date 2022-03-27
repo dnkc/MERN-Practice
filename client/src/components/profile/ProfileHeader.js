@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import isEmpty from "../../validation/is-empty-client";
 class ProfileHeader extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const { profile } = this.props;
 

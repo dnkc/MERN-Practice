@@ -5,9 +5,6 @@ import Moment from "react-moment";
 import { deleteEducation } from "../../actions/profileActions";
 
 class Education extends Component {
-  constructor() {
-    super();
-  }
   onDeleteClick(id) {
     this.props.deleteEducation(id);
   }
