@@ -6,8 +6,17 @@ const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 const passport = require("passport");
-
+const { expressCspHeader, INLINE, NONE, SELF } = require("express-csp-header");
 const app = express();
+
+app.use(
+  expressCspHeader({
+    policies: {
+      "default-src": [expressCspHeader.NONE],
+      "img-src": [expressCspHeader.SELF],
+    },
+  })
+);
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
