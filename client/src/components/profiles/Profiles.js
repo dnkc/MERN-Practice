@@ -6,6 +6,9 @@ import { getProfiles } from "../../actions/profileActions";
 import Profile from "./Profile";
 
 class Profiles extends Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.props.getProfiles();
   }

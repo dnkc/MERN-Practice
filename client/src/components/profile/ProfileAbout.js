@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import isEmpty from "../../validation/is-empty-client";
 class ProfileAbout extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     const { profile } = this.props;
     // get first name

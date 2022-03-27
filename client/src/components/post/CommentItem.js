@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { deleteComment } from "../../actions/postActions";
 
 class CommentItem extends Component {
+  constructor(props) {
+    super(props);
+  }
   onDeleteClick(postId, commentId) {
     this.props.deleteComment(postId, commentId);
   }

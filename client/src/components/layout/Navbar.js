@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { clearCurrentProfile } from "../../actions/profileActions";
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+  }
   onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();

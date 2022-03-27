@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 import CommentForm from "./CommentForm";
 import CommentFeed from "./CommentFeed";
 class Post extends Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.props.getPost(this.props.match.params.id);
   }

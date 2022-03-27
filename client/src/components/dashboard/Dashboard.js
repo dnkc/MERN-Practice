@@ -8,6 +8,9 @@ import ProfileActions from "./ProfileActions";
 import Experience from "./Experience";
 import Education from "./Education";
 class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.props.getCurrentProfile();
   }
