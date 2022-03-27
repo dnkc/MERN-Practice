@@ -18,11 +18,14 @@ const MONGO_DB = require("./config/keys").mongoURI;
 
 // connect to mongoDB
 mongoose
-  .connect(MONGO_DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false, // used so that findOneAndUpdate() works
-  })
+  .connect(
+    "mongodb+srv://nagard:1DK2mongo3@cluster0.yrwwa.mongodb.net/socialmedia?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false, // used so that findOneAndUpdate() works
+    }
+  )
   .then(() => console.log("MongoDB Connected!"))
   .catch((err) => console.log(err));
 
