@@ -1,4 +1,4 @@
-import spingif from "../common/spinner.gif";
+import spingif from "./spinner.gif";
 
 import React from "react";
 
