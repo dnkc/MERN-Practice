@@ -15,8 +15,6 @@ app.use(bodyParser.json());
 // DB Config
 const MONGO_DB = require("./config/keys").mongoURI;
 
-const __dirname = path.resolve();
-
 if (process.env.NODE_ENV === "production") {
   // need to make build folder path static
   app.use(express.static(path.join(__dirname, "/client/build")));
